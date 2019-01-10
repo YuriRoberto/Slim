@@ -2,20 +2,11 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Psr\Http\Message\ResponseInterface as Response;
 
-$app = new \Slim\App;
+$settings = require __DIR__.'/src/settings.php';
 
-$app->get('/hello', function(){
-    return 'Hello world!';
-});
+$app = new \Slim\App($settings);
 
-$app->get('/hello/{name}',function($request, $response){
-    $name = $request->getAttribute('name');
-    $response->getBody()->write("Hello, {$name}");
-    
-    return $response;
-});
+require __DIR__.'/src/routes.php';
 
 $app->run();
