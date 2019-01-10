@@ -8,8 +8,9 @@ $app->get('/hello', function(){
     return 'Hello world!';
 });
 
-$app->get('/hello/{name}',function($request, Response $response){
-    $name = $request->getAttribute('name');
+$app->get('/hello[/{name}]',function($request, Response $response){
+    
+    $name = $request->getAttribute('name') ?? 'World';
     $response->getBody()->write("Hello, {$name}");
     
     return $response;
