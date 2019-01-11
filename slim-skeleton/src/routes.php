@@ -39,7 +39,7 @@ $app->post('/users', function (Request $request, Response $response, array $args
 
     
     return $response->withStatus(302)->withHeader('Location', '/users');
-});
+})->add($auth);
 
 
 $app->get('/users/{id}', function ($request, $response, $args) {
@@ -49,4 +49,13 @@ $app->get('/users/{id}', function ($request, $response, $args) {
     $users = $table->where('id', $id)->delete();
 
     return $response->withStatus(302)->withHeader('Location', '/users');
+})->add($auth);
+
+$app->map(['GET', 'POST'],'/login', function ($request, $response) {
+    
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        
+    }
+
+    $this->renderer->render($response, 'login.phtml');
 });
