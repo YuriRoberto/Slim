@@ -60,7 +60,7 @@
                     <tr>
                         <td><?php echo $user->id; ?></td>
                         <td><?php echo $user->name; ?></td>
-                        <td><a href="#" class="btn">remover</a></td>
+                        <td><a href="/users/<?php echo $user->id; ?>" class="btn">remover</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

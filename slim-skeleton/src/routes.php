@@ -40,3 +40,13 @@ $app->post('/users', function (Request $request, Response $response, array $args
     
     return $response->withStatus(302)->withHeader('Location', '/users');
 });
+
+
+$app->get('/users/{id}', function ($request, $response, $args) {
+    $id = $args['id'];
+
+    $table = $this->db->table('users');
+    $users = $table->where('id', $id)->delete();
+
+    return $response->withStatus(302)->withHeader('Location', '/users');
+});
