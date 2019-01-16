@@ -2,7 +2,7 @@
 
 namespace SonSlim\Modules\Migrations\src\Commands;
 
-use Phinx\Command\SeedCreate;
+use Phinx\Console\Command\SeedCreate;
 
 class SeedCreateCommand extends SeedCreate {
 
