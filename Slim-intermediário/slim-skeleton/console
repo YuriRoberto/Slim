@@ -5,10 +5,19 @@ require __DIR__.'/autoload.php';
 
 use \Symfony\Component\Console\Application;
 use \SonSlim\Modules\Core\src\Commands\ServerCommand;
+use \SonSlim\Modules\Migrations\src\Commands\InitCommand;
+use \SonSlim\Modules\Migrations\src\Commands\MigrationCommand;
+use \SonSlim\Modules\Migrations\src\Commands\SeedCommand;
+use \SonSlim\Modules\Migrations\src\Commands\SeedCreateCommand;
 
 $application = new Application;
 
 $application->add(new ServerCommand());
+$application->add(new InitCommand());
+$application->add(new MigrationCommand());
+$application->add(new SeedCommand());
+$application->add(new SeedCreateCommand());
+
 $application->run();
 
 
