@@ -4,11 +4,11 @@
 require __DIR__.'/autoload.php';
 
 use \Symfony\Component\Console\Application;
+use \SonSlim\Modules\Core\src\Commands\ServerCommand;
 
 $application = new Application;
 
-$application->add();
-
+$application->add(new ServerCommand());
 $application->run();
 
 
