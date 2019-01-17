@@ -1,6 +1,6 @@
 <?php 
 
-namespace SonSlim\Modules\Migrations\src\Commands;
+namespace SonSlim\Migrations\Commands;
 
 use Phinx\Console\Command\SeedRun;
 

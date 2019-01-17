@@ -4,11 +4,11 @@
 require __DIR__.'/autoload.php';
 
 use \Symfony\Component\Console\Application;
-use \SonSlim\Modules\Core\src\Commands\ServerCommand;
-use \SonSlim\Modules\Migrations\src\Commands\InitCommand;
-use \SonSlim\Modules\Migrations\src\Commands\MigrationCommand;
-use \SonSlim\Modules\Migrations\src\Commands\SeedCommand;
-use \SonSlim\Modules\Migrations\src\Commands\SeedCreateCommand;
+use \SonSlim\Core\Commands\ServerCommand;
+use \SonSlim\Migrations\Commands\InitCommand;
+use \SonSlim\Migrations\Commands\MigrationCommand;
+use \SonSlim\Migrations\Commands\SeedCommand;
+use \SonSlim\Migrations\Commands\SeedCreateCommand;
 
 $application = new Application;
 

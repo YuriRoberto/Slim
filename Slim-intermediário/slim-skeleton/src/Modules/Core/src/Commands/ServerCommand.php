@@ -1,6 +1,6 @@
 <?php
 
-namespace SonSlim\Modules\Core\src\Commands;
+namespace SonSlim\Core\Commands;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -18,7 +18,6 @@ class ServerCommand extends Command{
         $output->write('Run server in http://localhost:8000');
 
         exec('php -S localhost:8000 - t' . getcwd() . DIRECTORY_SEPARATOR . 'public');
-
     }
 
 }

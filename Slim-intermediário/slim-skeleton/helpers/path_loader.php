@@ -9,7 +9,7 @@ if (!function_exists('path_modules')){
             return $paths;
         }
 
-        foreach ($paths as $path){
+        foreach ($paths as &$path){
             $path = $path . $suffix;
         }
 
